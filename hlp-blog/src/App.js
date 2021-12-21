@@ -1,6 +1,6 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './components/Header'
 import Intro from './components/Intro'
 import BlogList from './components/BlogList';
@@ -16,16 +16,14 @@ function App() {
     <div>
       <Header />
       <Routes>
-        <Route path='/' element={<Intro />} />
-      </Routes>
-      <Routes>
         <Route path='/' element={<BlogList title={title} setTitle={setTitle} content={content} setContent={setContent}/>} />
+          <Route path='/content' element={<Blog title={title} setTitle={setTitle} content={content} setContent={setContent}/>} />
       </Routes>
-      <Routes>
-        <Route path='/content' element={<Blog title={title} setTitle={setTitle} content={content} setContent={setContent}/>} />
-      </Routes>
+      {/* <Route path='/' element={<Intro />} /> */}
     </div>
   );
 }
 
 export default App;
+
+

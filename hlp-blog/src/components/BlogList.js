@@ -4,10 +4,11 @@ import { Link, Navigate } from 'react-router-dom';
 
 const BlogList = (props) => {
     const [blogList, setBlogList] = useState([]);
-    const [blogID, setBlogID] = useState();
-    
+    // const [blogID, setBlogID] = useState();
 
     useEffect(() => {
+        props.setTitle('');
+        props.setContent('');
         const fetchData = async () => {
             try {
                 const res = await axios.get(`${process.env.REACT_APP_API_URL}/blog_posts/`)
@@ -20,13 +21,11 @@ const BlogList = (props) => {
         fetchData();
     }, [])
 
-    let blogContent = async () => {
+    const getBlogContent = async (id) => {
         try {
-            const res = await axios.get(`${process.env.REACT_APP_API_URL}/blog_posts/${blogID}`)
+            const res = await axios.get(`${process.env.REACT_APP_API_URL}/blog_posts/${id}`)
             props.setTitle(res.data.title)
             props.setContent(res.data.content)
-            console.log(props.title)
-            console.log(props.content)
         }
         catch (err) {
             
@@ -37,15 +36,13 @@ const BlogList = (props) => {
         return (
             <li key={listItem.id}>{listItem.title} <button
                     onClick={() => {
-                        setBlogID(listItem.id)
-                        blogContent()
+                        getBlogContent(listItem.id)
                     }}>Read
                 </button>
             </li>
         )
     })
     
-
     return props.title && props.content ? (
         <Navigate to ='/content' />
         ) : (

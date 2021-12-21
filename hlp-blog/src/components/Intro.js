@@ -1,6 +1,7 @@
-
+import { useEffect } from 'react';
 
 function Intro() {
+
     return(
         <div>
             <p>Welcome to the High Level Programming Blog by Damon Pickett.</p>
