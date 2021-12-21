@@ -1,18 +1,17 @@
-// import { Link } from 'react-router-dom'
 import axios from 'axios';
-import React, { useState, useEffect } from 'react'; 
+import React, { useState, useEffect } from 'react';
+import { Link, Navigate } from 'react-router-dom';
 
-const BlogList = () => {
+const BlogList = (props) => {
     const [blogList, setBlogList] = useState([]);
+    const [blogID, setBlogID] = useState();
+    
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                // console.log(process.env.REACT_APP_API_URL)
-                const res = await axios.get(`http://localhost:8000/blog_posts/`)
-                // useState to set a list
+                const res = await axios.get(`${process.env.REACT_APP_API_URL}/blog_posts/`)
                 setBlogList(res.data)
-                
             }
             catch (err) {
 
@@ -21,23 +20,38 @@ const BlogList = () => {
         fetchData();
     }, [])
 
+    let blogContent = async () => {
+        try {
+            const res = await axios.get(`${process.env.REACT_APP_API_URL}/blog_posts/${blogID}`)
+            props.setTitle(res.data.title)
+            props.setContent(res.data.content)
+            console.log(props.title)
+            console.log(props.content)
+        }
+        catch (err) {
+            
+        }
+    }
+
     let listHTML = blogList.map((listItem) => {
         return (
-            <li>{listItem.title}</li>
+            <li key={listItem.id}>{listItem.title} <button
+                    onClick={() => {
+                        setBlogID(listItem.id)
+                        blogContent()
+                    }}>Read
+                </button>
+            </li>
         )
     })
+    
 
-    return(
+    return props.title && props.content ? (
+        <Navigate to ='/content' />
+        ) : (
         <div>
-            <h3>Entries</h3>
+            <h3>Blog Posts</h3>
             {listHTML}
-            {/* I need to set a state for the list of blog entries */}
-            {/* I need to make an API call to my backend  which sets this state */}
-            {/* the state is an array of objects */}
-            {/* in the return, we return something like {blogList.title} and {bloglist.created_at} */}
-            {/* The title needs to link to a Route which shows the content of the post */}
-
-            
         </div>
     )
 };
