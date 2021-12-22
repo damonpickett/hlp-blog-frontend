@@ -1,14 +1,12 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import { Link, Navigate } from 'react-router-dom';
+import Blog from './Blog';
 
 const BlogList = (props) => {
     const [blogList, setBlogList] = useState([]);
     // const [blogID, setBlogID] = useState();
 
     useEffect(() => {
-        props.setTitle('');
-        props.setContent('');
         const fetchData = async () => {
             try {
                 const res = await axios.get(`${process.env.REACT_APP_API_URL}/blog_posts/`)
@@ -44,7 +42,7 @@ const BlogList = (props) => {
     })
     
     return props.title && props.content ? (
-        <Navigate to ='/content' />
+        <Blog title={props.title} setTitle={props.setTitle} content={props.content} setContent={props.setContent}/>
         ) : (
         <div>
             <h3>Blog Posts</h3>

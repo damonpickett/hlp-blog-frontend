@@ -14,10 +14,10 @@ function App() {
 
   return (
     <div>
-      <Header />
+      <Header setTitle={setTitle} setContent={setContent}/>
       <Routes>
         <Route path='/' element={<BlogList title={title} setTitle={setTitle} content={content} setContent={setContent}/>} />
-          <Route path='/content' element={<Blog title={title} setTitle={setTitle} content={content} setContent={setContent}/>} />
+          {/* <Route path='/content' element={<Blog title={title} setTitle={setTitle} content={content} setContent={setContent}/>} /> */}
       </Routes>
       {/* <Route path='/' element={<Intro />} /> */}
     </div>

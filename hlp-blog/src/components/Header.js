@@ -1,11 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
 
-function Header() {
-
+function Header(props) {
+    function clearState() {
+        props.setTitle('')
+        props.setContent('')
+    }
     return(
         <div>
-            <Link to='/'><h1>High Level Programming Blog</h1></Link>
+            <Link onClick={clearState} to='/'><h1>High Level Programming Blog</h1></Link>
             <p>By Damon Pickett</p>
         </div>
     )
