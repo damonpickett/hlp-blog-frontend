@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import Blog from './Blog';
+import apiUrl from '../api';
 
 const BlogList = (props) => {
     const [blogList, setBlogList] = useState([]);
@@ -9,7 +10,7 @@ const BlogList = (props) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get(`${process.env.REACT_APP_API_URL}/blog_posts/`)
+                const res = await axios.get(`${apiUrl}/blog_posts/`)
                 setBlogList(res.data)
             }
             catch (err) {
@@ -21,7 +22,7 @@ const BlogList = (props) => {
 
     const getBlogContent = async (id) => {
         try {
-            const res = await axios.get(`${process.env.REACT_APP_API_URL}/blog_posts/${id}`)
+            const res = await axios.get(`${apiUrl}/blog_posts/${id}`)
             props.setTitle(res.data.title)
             props.setContent(res.data.content)
         }
