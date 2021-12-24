@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/hlp-blog-frontend/static/css/main.35011273.css",
+    "main.js": "/hlp-blog-frontend/static/js/main.dfb9094f.js",
+    "index.html": "/hlp-blog-frontend/index.html",
+    "main.35011273.css.map": "/hlp-blog-frontend/static/css/main.35011273.css.map",
+    "main.dfb9094f.js.map": "/hlp-blog-frontend/static/js/main.dfb9094f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.35011273.css",
+    "static/js/main.dfb9094f.js"
+  ]
+}
