@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# High Level Programming Blog
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I've created the High Level Programming blog to give myself a place to articulate programming concepts at a high level. By explaining programming concepts clearly in writing I will crystalize the knowledge I acquire and become a better programmer.
 
-## Available Scripts
+## Technologies Used
 
-In the project directory, you can run:
+- **Frontend**: JavaScript/React.js
+- **Backend**: Python/Django
 
-### `npm start`
+## User Stories/React Architecture/Wireframes/Backend Models
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[User Stories, React Architecture, and Wireframes](https://imgur.com/a/sUX8vR3)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Backend Models
 
-### `npm test`
+**Blog Post**
+Title = text
+Content = text
+updated_at 
+created_at
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Time/Priority Matrix
 
-### `npm run build`
+### Backend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Component | Priority | Estimated Time | Actual Time |
+| --- | :---: |  :---: | :---: |
+| Python/Django database set up | H | 1hr | 0.5hr |
+| Backend file structure | H | 1hr | 0.5 |
+| settings, urls, models, serializers | H | 2hr | 3hr |
+| views (full CRUD) test in postman | H | 2hr | 2hr |
+| create superuser account, test | H | 1hr | 0.25 |
+| research and implement summernote | H | 3hr | 1hr |
+| Deployment | H | 3hr | 5hr |
+| Total | H | 13hr | 12.25hr |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Frontend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Component | Priority | Estimated Time | Actual Time |
+| --- | :---: |  :---: | :---: |
+| Set up React App | H | 1hr | 0.5hr |
+| Set up file structure | H | 1hr | 0.5hr |
+| App Component | H | 1hr | 1hr |
+| Nav component | H | 1hr | 0.5hr |
+| Intro component | H | 1hr | 0.25hr |
+| Blog List component | H | 1hr | 3hr |
+| Blog List connectivity to backend | H | 3hr | 1hr |
+| Blog Entry component | H | 1hr | 1hr |
+| Blog Entry connectivity to backend | H | 3hr | 1hr |
+| Styling | H | 3hr | TBA |
+| Blog Entry component | H | 1hr | 2hr |
+| Deployment | H | 2hr | 5hr |
+| Total | H | 19hr | 15.75 |
 
-### `npm run eject`
+## Hurdles
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The project's biggest hurdle so far has been the 'Read' button within my ```<BlogList>``` component. My BlogList component uses a ternary operator to determine when to display blog content. The conditional checks for whether the ```title``` and ```content``` state has been set. If they have, the title and content of the blog post will be displayed. Originally, if the conditional found the states to be set, I used ```<Navigate to='/content'>``` as opposed to simply mounting the ```<Blog>``` component. This worked fine for having the blog content displayed, but when I would click the homepage link, the ```title``` and ```content``` states would be cleared, but the api call to my backend, which was supposed to return a complete list of blog posts, failed. I still don't fully understand why this happened. My ternary operator seemed to fail to recognize that the state had been cleared. But having my ```<Blog>``` component mount as opposed to navigating to the unnecessary content page fixed the issue. The lesson here is obvious in hindsight: Keep it simple.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
