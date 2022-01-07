@@ -10,7 +10,7 @@ import Blog from './components/Blog';
 function App() {
   
   const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
+  const [content, setContent] = useState([]);
 
   return (
     <div>
