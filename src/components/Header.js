@@ -9,7 +9,7 @@ function Header(props) {
     return(
         <div>
             <Link onClick={clearState} to='/'><h1>High Level Programming Blog</h1></Link>
-            <p>By Damon Pickett</p>
+            <p>By damonPickett</p>
         </div>
     )
 }
