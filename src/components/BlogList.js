@@ -5,7 +5,6 @@ import apiUrl from '../api';
 
 const BlogList = (props) => {
     const [blogList, setBlogList] = useState([]);
-    // const [blogID, setBlogID] = useState();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -53,8 +52,4 @@ const BlogList = (props) => {
 };
 
 export default BlogList;
-
-// Second goal: have api call return anything from backend
-//     ? useEffect, axios, async/away ?
-// Third goal: api call returns title and created date from backend for all entries
 

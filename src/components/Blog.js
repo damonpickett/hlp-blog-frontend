@@ -12,7 +12,7 @@ const Blog = (props) => {
     return (
         <div className='blog-post'>
             <h3>{props.title}</h3>
-            <div dangerouslySetInnerHTML={blogContent()} />
+            <div className='content' dangerouslySetInnerHTML={blogContent()} />
         </div>
     )
 }

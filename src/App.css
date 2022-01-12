@@ -4,15 +4,12 @@ font-family: 'Zen Antique Soft', serif;
 font-family: 'Zen Kaku Gothic New', sans-serif;
 font-family: 'Zen Kurenaido', sans-serif; */
 
-* {
-    text-align:center;
-    font-family: 'Montserrat', sans-serif;
+/* UNIVERSAL */
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-li {
-    list-style-type: none;
-}
 
-.blog-post {
-    
-}
+/* BLOG POSTS */
