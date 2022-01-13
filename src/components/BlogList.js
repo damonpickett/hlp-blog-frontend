@@ -44,7 +44,7 @@ const BlogList = (props) => {
     return props.title && props.content ? (
         <Blog title={props.title} setTitle={props.setTitle} content={props.content} setContent={props.setContent}/>
         ) : (
-        <div>
+        <div className='blog-list'>
             <h3>Blog Posts</h3>
             {listHTML}
         </div>
