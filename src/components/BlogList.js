@@ -32,19 +32,21 @@ const BlogList = (props) => {
 
     let listHTML = blogList.map((listItem) => {
         return (
-            <li key={listItem.id}>{listItem.title} <button
-                    onClick={() => {
-                        getBlogContent(listItem.id)
-                    }}>Read
-                </button>
-            </li>
+            <div className='blog-list'>
+                <li key={listItem.id}>{listItem.title}</li>
+                <button
+                        onClick={() => {
+                            getBlogContent(listItem.id)
+                        }}>Read
+                    </button>
+            </div>
         )
     })
     
     return props.title && props.content ? (
         <Blog title={props.title} setTitle={props.setTitle} content={props.content} setContent={props.setContent}/>
         ) : (
-        <div className='blog-list'>
+        <div className='blog-list-page'>
             <h3>Blog Posts</h3>
             {listHTML}
         </div>
