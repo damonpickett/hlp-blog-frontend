@@ -7,9 +7,9 @@ function Header(props) {
         props.setContent('')
     }
     return(
-        <div>
-            <Link onClick={clearState} to='/'><h1>High Level Programming Blog</h1></Link>
-            <p>By damonPickett</p>
+        <div className='header'>
+            <Link onClick={clearState} to='/'><h1>HLP Blog</h1></Link>
+            <p>By <span className='author'>damonPickett</span></p>
         </div>
     )
 }
