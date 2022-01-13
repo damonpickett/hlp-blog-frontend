@@ -32,7 +32,7 @@ const BlogList = (props) => {
 
     let listHTML = blogList.map((listItem) => {
         return (
-            <div className='blog-list'>
+            <div>
                 <li key={listItem.id}>{listItem.title}</li>
                 <button
                         onClick={() => {
@@ -48,7 +48,9 @@ const BlogList = (props) => {
         ) : (
         <div className='blog-list-page'>
             <h3>Blog Posts</h3>
-            {listHTML}
+            <div className='blog-list'>
+                {listHTML}
+            </div>
         </div>
     )
 };

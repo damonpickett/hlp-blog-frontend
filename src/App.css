@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&family=Zen+Antique+Soft&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&family=Zen+Kurenaido&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* font-family: 'Montserrat', sans-serif;
 font-family: 'Zen Antique Soft', serif;
 font-family: 'Zen Kaku Gothic New', sans-serif;
 font-family: 'Zen Kurenaido', sans-serif; */
+/* font-family: 'Source Code Pro', monospace; */
 /* font-family: 'Source Code Pro', monospace; */
 
 /* UNIVERSAL */
@@ -45,12 +47,13 @@ a {
 
 .blog-list-page {
     padding: 15px;
-    text-align: center;
+    text-align: left;
 }
 
 .blog-list-page h3 {
     margin-bottom: 10px;
     font-size: 1.4rem;
+    
 }
 
 .blog-list {
@@ -61,16 +64,18 @@ a {
     padding: 10px 5px;
     font-weight: 700;
     font-size: 1.2rem;
-    text-align: center
+    font-family: 'Source Code Pro', monospace;
+    color:rgba(77 160 229);
 }
 
 .blog-list button {
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     background-color: #0AD2ED;
     border-radius: 20px;
-    border: 2px solid #FF00C7;;
-    color: #1B03A3;
+    border: 2px solid #FF00C7;
+    color: #FF00C7;
+    font-weight: 700;
 }
 
 /* BLOG POST */
@@ -82,5 +87,13 @@ a {
 
 .blog-post h3 {
     margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.content {
+    color:rgba(77 160 229);
+    font-weight: 600;
+    font-size: 1.2rem;
+    font-family: 'Source Code Pro', monospace;
 }
 
