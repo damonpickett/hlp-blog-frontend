@@ -47,6 +47,11 @@ const BlogList = (props) => {
         <Blog title={props.title} setTitle={props.setTitle} content={props.content} setContent={props.setContent}/>
         ) : (
         <div className='blog-list-page'>
+            <div className='intro'>
+                <h2>The High Level Programming Blog</h2>
+                <p>Welcome to the High Level Programming Blog.</p>
+                <p>The purpose of this blog is to translate programming concepts into terms that are accessible and easy to remember</p>
+            </div>
             <h3>Blog Posts</h3>
             <div className='blog-list'>
                 {listHTML}
