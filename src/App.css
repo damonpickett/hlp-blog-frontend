@@ -46,17 +46,15 @@ a {
 /* BLOG LIST */
 
 .blog-list-page {
-    padding: 15px;
+    padding: 20px;
     text-align: left;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .blog-list-page h3 {
     margin-bottom: 10px;
     font-size: 1.4rem;
-    
-}
-
-.blog-list {
 }
 
 .blog-list li {
@@ -83,6 +81,8 @@ a {
 .blog-post {
     text-align: left;
     padding: 15px;
+    margin: 0 auto;
+    max-width: 700px;
 }
 
 .blog-post h3 {
