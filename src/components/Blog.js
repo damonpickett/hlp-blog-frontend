@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-import BlogList from "./BlogList";
 
 const Blog = (props) => {
     function clearState() {
@@ -13,6 +11,7 @@ const Blog = (props) => {
     }
 
     // 'dangerously' calls the blogContent function and converts the html
+    // 'Homepage' button clears the title and content state, this causes the BlogList component to mount
     return (
         <div className='blog-post'>
             <h3>{props.title}</h3>
