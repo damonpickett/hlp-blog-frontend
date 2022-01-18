@@ -112,6 +112,17 @@ a {
     margin-bottom: 25px;
 }
 
+.content a {
+    color: darkorange;
+    text-decoration: underline;
+    font-family: 'Source Code Pro', monospace;
+    transition: font-size 1s;
+}
+
+.content a:hover {
+    font-size: 1.3rem;
+}
+
 .blog-post button {
     padding: 10px;
     margin-bottom: 20px;

@@ -34,7 +34,7 @@ const BlogList = (props) => {
 
     // The map array method iterates over the array elements in blogList
     // For every iteration a list item is returned displaying the title of each blog post
-    // A button is also returned which, when clicked, activates the getBlogContent function and pases the blogs id #
+    // A button is also returned which, when clicked, activates the getBlogContent function and passes the blogs id #
     let listHTML = blogList.map((listItem) => {
         return (
             <div>
@@ -57,7 +57,7 @@ const BlogList = (props) => {
             <div className='intro'>
                 <h2>The High Level Programming Blog</h2>
                 <p>Welcome to the High Level Programming Blog.</p>
-                <p>The purpose of this blog is to translate programming concepts into terms that are accessible and easy to remember</p>
+                <p>The purpose of this blog is to translate programming concepts into terms that are accessible and easy to remember.</p>
             </div>
             <h3>Blog Posts</h3>
             <div className='blog-list'>
