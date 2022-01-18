@@ -114,13 +114,14 @@ a {
 
 .content a {
     color: darkorange;
-    text-decoration: underline;
+    text-decoration: none;
     font-family: 'Source Code Pro', monospace;
-    transition: font-size 1s;
+    transition: background-color 2s;
 }
 
 .content a:hover {
-    font-size: 1.3rem;
+    background-color: #057f8f;
+    border-radius: 3px;
 }
 
 .blog-post button {
