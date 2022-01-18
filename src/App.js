@@ -9,13 +9,14 @@ function App() {
   
   const [title, setTitle] = useState('');
   const [content, setContent] = useState([]);
+  const [date, setDate] = useState([]);
 
   return (
     <div>
       {/* header is passed states so that states can be cleared upon clicking on the header link */}
       <Header setTitle={setTitle} setContent={setContent}/>
       <Routes>
-        <Route path='/' element={<BlogList title={title} setTitle={setTitle} content={content} setContent={setContent}/>} />
+        <Route path='/' element={<BlogList title={title} setTitle={setTitle} content={content} setContent={setContent} date={date} setDate={setDate}/>} />
       </Routes>
     </div>
   );
