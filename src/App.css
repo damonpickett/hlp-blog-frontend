@@ -88,6 +88,17 @@ a {
     border: 2px solid #FF00C7;
     color: #FF00C7;
     font-weight: 700;
+    transition: All 250ms ease;
+    box-shadow: 0px 3px 0px #545353;
+    position: relative;
+}
+
+.blog-list button:active {
+    box-shadow: none !important;
+    transition: All 250ms ease;
+    position: relative;
+    top: 3px;
+
 }
 
 /* BLOG POST */
@@ -142,5 +153,15 @@ a {
     font-weight: 700;
     display: block;
     margin: 0 auto;
+    transition: All 250ms ease;
+    box-shadow: 0px 3px 0px #545353;
+    position: relative;
+}
+
+.blog-post button:active {
+    box-shadow: none !important;
+    transition: All 250ms ease;
+    position: relative;
+    top: 3px;
 }
 
