@@ -19,7 +19,7 @@ const BlogList = (props) => {
         }
         fetchData();
     }, [])
-
+    
     // Makes an API call using the blog post ID passed by the 'Read' button
     // sets the title state with the title of the blog post, diddo content
     const getBlogContent = async (id) => {
@@ -27,6 +27,7 @@ const BlogList = (props) => {
             const res = await axios.get(`${apiUrl}/blog_posts/${id}`)
             props.setTitle(res.data.title)
             props.setContent(res.data.content)
+            props.setDate(res.data.updated_at)
         }
         catch (err) {
         }
@@ -51,7 +52,7 @@ const BlogList = (props) => {
     // if title and content state are set, mount the Blog component
     // otherwise display the jsx found below including the listHTML containing the list of blog titles/read button.
     return props.title && props.content ? (
-        <Blog title={props.title} setTitle={props.setTitle} content={props.content} setContent={props.setContent}/>
+        <Blog date={props.date} setDate={props.setDate} title={props.title} setTitle={props.setTitle} content={props.content} setContent={props.setContent}/>
         ) : (
         <div className='blog-list-page'>
             <div className='intro'>

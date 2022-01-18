@@ -104,6 +104,14 @@ a {
     font-size: 1.4rem;
 }
 
+.date {
+    margin-bottom: 20px;
+}
+
+.date-slice {
+    color: rgba(77 160 229);
+}
+
 .content p{
     color:rgba(77 160 229);
     font-weight: 600;
