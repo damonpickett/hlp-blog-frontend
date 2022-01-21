@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/hlp-blog-frontend/static/css/main.14bd1648.css",
-    "main.js": "/hlp-blog-frontend/static/js/main.ae8d6d79.js",
+    "main.js": "/hlp-blog-frontend/static/js/main.c5325a2c.js",
     "index.html": "/hlp-blog-frontend/index.html",
     "main.14bd1648.css.map": "/hlp-blog-frontend/static/css/main.14bd1648.css.map",
-    "main.ae8d6d79.js.map": "/hlp-blog-frontend/static/js/main.ae8d6d79.js.map"
+    "main.c5325a2c.js.map": "/hlp-blog-frontend/static/js/main.c5325a2c.js.map"
   },
   "entrypoints": [
     "static/css/main.14bd1648.css",
-    "static/js/main.ae8d6d79.js"
+    "static/js/main.c5325a2c.js"
   ]
 }
