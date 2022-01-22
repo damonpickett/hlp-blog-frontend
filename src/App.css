@@ -65,13 +65,13 @@ a {
     margin-bottom: 10px;
 }
 
-.intro a {
+.intro a, .contact a {
     color: darkorange;
     text-decoration: none;
     transition: background-color 0.5s;
 }
 
-.intro a:hover {
+.intro a:hover, .contact a:hover {
     background-color: #057f8f;
     border-radius: 3px;
 }
@@ -131,6 +131,13 @@ a {
 
 .date-slice {
     color: rgba(77 160 229);
+}
+
+p.contact {
+    color:rgba(77 160 229);
+    font-weight: 500;
+    margin-bottom: 40px;
+    font-style: italic;
 }
 
 .content {
