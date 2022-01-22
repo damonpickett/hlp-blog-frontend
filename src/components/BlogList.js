@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Blog from './Blog';
 import apiUrl from '../api';
 
@@ -59,6 +60,7 @@ const BlogList = (props) => {
                 <h2>The High Level Programming Blog</h2>
                 <p>Welcome to the High Level Programming Blog.</p>
                 <p>The purpose of this blog is to translate programming concepts into terms that are accessible and easy to remember.</p>
+                <p>If you would like to contact the author of this site, please click <Link to='/contact'>here</Link>.</p>
             </div>
             <h3>Blog Posts</h3>
             <div className='blog-list'>
