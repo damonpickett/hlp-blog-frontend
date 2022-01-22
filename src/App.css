@@ -133,6 +133,10 @@ a {
     color: rgba(77 160 229);
 }
 
+.content {
+    margin-bottom: 40px;
+}
+
 .content p{
     color:rgba(77 160 229);
     font-weight: 600;
@@ -212,7 +216,6 @@ pre {
 
 .contact-form button {
     padding: 10px;
-    margin-bottom: 20px;
     background-color: #020050;
     border-radius: 20px;
     border: 2px solid #FF00C7;
@@ -230,4 +233,9 @@ pre {
     transition: All 250ms ease;
     position: relative;
     top: 3px;
+}
+
+.contact-form p {
+    text-align: center;
+    margin-top: 20px;
 }

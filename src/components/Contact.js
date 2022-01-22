@@ -1,11 +1,5 @@
-import { useState } from 'react';
 
-const Contact = (props) => {
-    const [thankyou, setThankYou] = useState('');
-
-    const message = () => {
-        setThankYou('Thank you. Your message has been sent.')
-    }
+const Contact = () => {
 
    return (
     <div className='contact-page'>
@@ -15,8 +9,7 @@ const Contact = (props) => {
                 <input type='text' name='name' placeholder='Your name'/>
                 <input type="email" name="email" placeholder="Your email address" required/>
                 <textarea name="message" rows="15" placeholder="How can I help you?"></textarea>
-                <button type="submit" onClick={() => {message()}}>Send</button>
-                <p>{thankyou}</p>
+                <button type="submit" >Send</button>
             </form>
         </div>
     </div>
